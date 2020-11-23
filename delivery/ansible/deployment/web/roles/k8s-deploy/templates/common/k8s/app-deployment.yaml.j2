@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ project_name }}-web
+  labels:
+    app: {{ project_name }}-web
+    environment: dev
+    owner: 'adeola.ojo'
+    deployment_type: 'webapp'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ project_name }}-web
+  template:
+    metadata:
+      labels:
+        app: {{ project_name }}-web
+        environment: dev
+        owner: 'adeola.ojo'
+    spec:
+      containers:
+        - name: app
+          image: aloeda/{{ project_name }}:{{ project_image_version }}
+          ports:
+              - containerPort: {{container_port}}
+          env:
+              - name: MERCHANT_API_URL
+                value: {{ merchant_api_url }}
+              - name: MY_NODE_NAME
+                valueFrom:
+                  fieldRef:
+                    fieldPath: spec.nodeName
+

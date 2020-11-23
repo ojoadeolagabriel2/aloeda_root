@@ -1,0 +1,16 @@
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: {{ project_name }}-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: {{ project_name | replace('_','-') }}.aloeda.com
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: {{ project_name }}-service
+              servicePort: 12345

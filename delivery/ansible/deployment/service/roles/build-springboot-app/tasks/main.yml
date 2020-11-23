@@ -1,0 +1,28 @@
+- name: show env vars
+  debug: msg=" dir {{ project_dir }} and name {{ project_artifact_name }}"
+
+- fail: msg="the variable 'project_dir' is not available"
+  when: "project_dir is not defined"
+
+- fail: msg="project_artifact_name is not defined"
+  when: "project_artifact_name is not defined"
+
+- name: Install a list of packages
+  yum:
+    name:
+      - nginx
+    state: present
+
+- name: "Check that the {{project_dir}} exists"
+  stat:
+    path: "{{project_dir}}"
+  register: stat_result
+
+- debug: msg="project_dir~{{project_dir}} with project_artifact_name~{{project_artifact_name}} exists~{{stat_result.stat.exists}}"
+
+- name: build if project dir is available
+  shell: "(cd {{project_dir}} && {{ role_path }}/scripts/build.sh)"
+
+- name: deploy docker image if project dir is available
+  shell: "(cd {{project_dir}} && {{ role_path }}/scripts/promote_docker_image.sh {{ project_name }} {{ project_image_version }})"
+  when: "stat_result.stat.exists == True and stat_result.stat.isdir and ignore_docker_promotion == False"

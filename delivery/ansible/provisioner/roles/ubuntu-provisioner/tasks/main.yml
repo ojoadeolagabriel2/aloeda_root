@@ -1,0 +1,34 @@
+---
+- name: ubuntu version
+  shell: "lsb_release -a"
+  become: true
+
+- name: py version
+  shell: "python --version"
+  register: py_version
+
+- debug: var=py_version
+
+- name: create ec2 instance
+  block:
+    - name: install ec2
+      amazon.aws.ec2:
+        key_name: default
+        instance_type: t2.micro
+        image: ami-0dba2cb6798deb6d8
+        wait: yes
+        group: default
+        count: 1
+        vpc_subnet_id: subnet-8d8fb2c7
+        assign_public_ip: yes
+      register: ec2_res
+      failed_when: >
+        'boto required for this module' in ec2_res.msg or
+        ec2_res.msg == error
+
+    - debug: msg="success"
+
+  when: "'Python' in py_version.stdout_lines[0]"
+
+- debug: var=ec2_res
+

@@ -1,0 +1,28 @@
+---
+- name: trigger app build
+  hosts: localhost
+
+  pre_tasks:
+    - debug: msg="building react app {{ PROJECT_DIR }}"
+
+  roles:
+    - { role: roles/build-react,
+        project_environment: "{{ BUILD_ENVIRONMENT }}",
+        project_name: "{{ PROJECT_NAME }}",
+        project_dir: "{{ PROJECT_DIR }}",
+        project_image_version: "{{ PROJECT_IMAGE_VERSION }}" }
+
+- name: trigger deploy play
+  hosts: website-instances
+
+  tasks:
+    - name: "copy tar"
+      copy:
+        src: "{{ PROJECT_DIR }}/package.tar.gz"
+        dest: ./
+        mode: 0644
+      become: true
+
+    - shell: "tar -xzvf ./package.tar.gz"
+
+

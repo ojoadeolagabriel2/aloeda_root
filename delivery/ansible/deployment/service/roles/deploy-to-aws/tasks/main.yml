@@ -1,0 +1,11 @@
+---
+- name: "copy {{ project_dir }}/target/{{ project_name}}.jar to ec2 instance"
+  copy:
+    src: "{{ project_dir }}/target/{{ project_name}}.jar"
+    dest: ./
+    owner: root
+    group: root
+    mode: 0644
+  become: true
+  tags:
+    - deploy

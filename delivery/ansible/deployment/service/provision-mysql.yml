@@ -1,0 +1,15 @@
+---
+- name: entrypoint play
+  hosts: localhost
+  vars:
+    recreate_db: "{{ PROVISION_DB }}"
+
+  pre_tasks:
+    - debug: msg="running {{PROJECT_DIR}} and recreate_db {{recreate_db}}"
+
+  roles:
+    - { role: roles/mysql,
+        project_dir: "{{ PROJECT_DIR }}",
+        when: recreate_db|default(false)|bool == true }
+
+

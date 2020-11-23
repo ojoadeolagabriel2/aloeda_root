@@ -1,0 +1,6 @@
+---
+- name: copy build to ec2 instance and run
+  hosts:
+  gather_facts: true
+
+-

@@ -1,0 +1,5 @@
+---
+harness_file_path: "{{ PROJECT_DIR }}/deployment/api/collection"
+harness_mappings_path: "{{ PROJECT_DIR }}/deployment/api/collection/mappings"
+harness_container_name: "{{ PROJECT_DIR | basename }}-container"
+harness_image_name: "ojoadeolagabriel/{{ PROJECT_DIR | basename }}-harness"

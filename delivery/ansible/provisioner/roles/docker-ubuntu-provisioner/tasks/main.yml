@@ -1,0 +1,5 @@
+- name: Transfer the script
+  copy: src=../script/installer.sh dest=~/ mode=0777
+
+- name: Install docker
+  command: "sh ~/installer.sh"

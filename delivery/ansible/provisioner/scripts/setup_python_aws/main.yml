@@ -1,0 +1,13 @@
+---
+- name: wohooo
+  hosts: "ec2-java-instances"
+  gather_facts: false
+  max_fail_percentage: 50
+  become: true
+
+  tasks:
+    - debug:
+        var: hostvars[inventory_hostname]
+
+  roles:
+    - role: ../../ubuntu-provisioner

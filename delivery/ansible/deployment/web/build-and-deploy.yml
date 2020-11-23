@@ -1,0 +1,25 @@
+---
+- name: trigger play
+  hosts: localhost
+
+  vars_files:
+    - "{{ PROJECT_DIR }}/deployment/inventory/{{ BUILD_ENVIRONMENT }}/app.yaml"
+
+  pre_tasks:
+    - debug: msg="building react app {{ PROJECT_DIR }} with merchant_api_url {{ merchant_api_url }}"
+
+  roles:
+    - { role: roles/build-react,
+        project_environment: "{{ BUILD_ENVIRONMENT }}",
+        project_name: "{{ PROJECT_NAME }}",
+        project_dir: "{{ PROJECT_DIR }}",
+        project_image_version: "{{ PROJECT_IMAGE_VERSION }}" }
+
+    - { role: roles/k8s-deploy,
+        app_namespace: "{{ APP_NAMESPACE | default('default') }}",
+        project_environment: "{{ BUILD_ENVIRONMENT }}",
+        project_name: "{{ PROJECT_NAME }}",
+        project_dir: "{{ PROJECT_DIR }}",
+        project_image_version: "{{ PROJECT_IMAGE_VERSION }}" }
+
+

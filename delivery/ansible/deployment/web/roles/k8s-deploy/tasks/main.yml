@@ -1,0 +1,44 @@
+---
+- set_fact:
+    current_role_path: "{{role_path}}"
+
+- name: localhost
+  vars:
+    manifest_files:
+      - app-namespace.yaml.j2
+      - ingress-deployment.yaml.j2
+      - app-deployment.yaml.j2
+      - app-service-deployment.yaml.j2
+    output_current_role_path: "{{current_role_path}}/templates/common/k8s/output"
+
+  block:
+    - debug: msg="project name is {{project_name}}"
+    - name: Creates working directory
+      file:
+        path: "{{output_current_role_path}}"
+        state: directory
+
+    - name: Copy yml files
+      template:
+        src: "{{ current_role_path }}/templates/common/k8s/{{ item }}"
+        dest: "{{ output_current_role_path }}/{{ item }}"
+        mode: '0777'
+      with_items:
+        - "{{ manifest_files }}"
+
+    - name: Stop k8 artifacts
+      shell: "kubectl delete -f {{output_current_role_path}}/{{ item }} --grace-period=0 --force --namespace {{ app_namespace }}"
+      ignore_errors: yes
+      with_items:
+        - "{{ manifest_files }}"
+      when: item != "app-namespace.yaml.j2"
+
+    - name: Start k8 artifacts
+      shell: "kubectl apply -f {{output_current_role_path}}/{{ item }} --namespace {{ app_namespace }}"
+      with_items:
+        - "{{ manifest_files }}"
+
+    - name: Remove commons dir
+      file:
+        path: "{{output_current_role_path}}"
+        state: absent

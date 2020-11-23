@@ -1,0 +1,51 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ project_name }}-app
+  labels:
+    app: {{ project_name }}-app
+    environment: dev
+    owner: 'adeola.ojo'
+    deployment_type: 'backend-service'
+spec:
+  replicas: {{ app_instance_count }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: {{ project_name }}-app
+  template:
+    metadata:
+      labels:
+        app: {{ project_name }}-app
+        environment: dev
+        owner: 'adeola.ojo'
+        deployment_type: 'backend-service'
+    spec:
+      containers:
+        - name: app
+          image: aloeda/{{ project_name }}:{{ project_image_version }}
+          args: ["--spring.profiles.active=STAGING"]
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: {{container_port}}
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+            periodSeconds: 3
+            failureThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: {{container_port}}
+            initialDelaySeconds: 70
+            timeoutSeconds: 2
+            periodSeconds: 8
+            failureThreshold: 1
+          ports:
+            - containerPort: {{container_port}}
+
