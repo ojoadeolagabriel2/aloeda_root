@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set +e
+
 if [ -x "$(command -v docker)" ]; then
     echo "Docker detected, skipping installation"
 else
@@ -11,4 +13,6 @@ else
     apt-cache policy docker-ce
     sudo apt-get install -y docker-ce
     sudo systemctl status docker
+
+    echo "Installing docker... complete"
 fi

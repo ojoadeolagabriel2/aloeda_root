@@ -17,3 +17,4 @@ fi
 
 # build new image with --rm=true
 docker build -t "${IMAGE_NAME}:${VERSION}" --rm=true .
+docker build -t "${IMAGE_NAME}:latest" --rm=true .

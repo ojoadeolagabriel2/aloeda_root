@@ -1,0 +1,12 @@
+---
+- hosts: deployer
+  become: true
+  gather_facts: true
+
+  tasks:
+    - shell: "ls -al"
+    - debug:
+        msg: "{{ lookup('hashi_vault', 'secret=secret/foo:value token=c975b780-d1be-8016-866b-01d0f9b688a5 url=http://myvault:8200') }}"
+
+  roles:
+    - { role: "{{ playbook_dir }}/../../roles/docker-ubuntu-provisioner" }
