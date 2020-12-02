@@ -1,5 +1,5 @@
 ---
-- name: "copy {{ project_dir }}/target/{{ project_name}}.jar to ec2 instance"
+- name: "copy {{ project_dir }}/target/{{ project_name}}.jar to app instance"
   copy:
     src: "{{ project_dir }}/target/{{ project_name}}.jar"
     dest: ./

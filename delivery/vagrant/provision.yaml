@@ -3,11 +3,7 @@
   become: yes
 
   tasks:
-    - name: Update OS
-      package:
-        name: '*'
-        state: latest
-
     - name: Install Basic packages
       package:
         name: [ 'vim', 'zip', 'bash-completion', 'wget', 'tmux' ]
+    - command: "sudo apt-get install openjdk-11-jre openjdk-11-jdk"

@@ -1,6 +1,6 @@
 ---
 - name: entrypoint play to aws
-  hosts: deployers
+  hosts: localhost
   gather_facts: false
 
   roles:
@@ -17,7 +17,7 @@
       }
 
 - name: entrypoint play to aws II
-  hosts: ec2-java-instances
+  hosts: app-instance
 
   roles:
     - { role: roles/deploy-to-aws,

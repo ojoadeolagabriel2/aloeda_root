@@ -7,12 +7,6 @@
 - fail: msg="project_artifact_name is not defined"
   when: "project_artifact_name is not defined"
 
-- name: Install a list of packages
-  yum:
-    name:
-      - nginx
-    state: present
-
 - name: "Check that the {{project_dir}} exists"
   stat:
     path: "{{project_dir}}"
@@ -22,7 +16,4 @@
 
 - name: build if project dir is available
   shell: "(cd {{project_dir}} && {{ role_path }}/scripts/build.sh)"
-
-- name: deploy docker image if project dir is available
-  shell: "(cd {{project_dir}} && {{ role_path }}/scripts/promote_docker_image.sh {{ project_name }} {{ project_image_version }})"
-  when: "stat_result.stat.exists == True and stat_result.stat.isdir and ignore_docker_promotion == False"
+  delegate_to: 127.0.0.1
