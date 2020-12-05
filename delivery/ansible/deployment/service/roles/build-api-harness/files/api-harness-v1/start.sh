@@ -8,17 +8,22 @@
 FILES_PATH="${1:-${PWD}/collection/__files}"
 MAPPINGS_PATH="${2:-${PWD}/collection/mappings}"
 PORT="${3:-8080:8080}"
-
 CONTAINER_NAME="${4}"
 IMAGE_NAME="${5}"
-DOCKER_PWD="${6:-a2f66114-2a13-4275-9f5a-9d429fedb519}" # dont forget to remove this
-DOCKER_RUN="${7:-no}"
+DOCKER_PWD="4bdfc9b0-b2f2-4321-a11c-f97d494a5993"
+DOCKER_RUN="${6:-no}"
+IMAGE_VERSION="1.${7:-1.0}"
 
 echo $DOCKER_PWD | docker login --username=ojoadeolagabriel --password-stdin
 docker rm -f ${CONTAINER_NAME} &>/dev/null && echo "Removed old container ${CONTAINER_NAME}"
 
-docker build -t $IMAGE_NAME .
-docker push $IMAGE_NAME
+# build harness images
+docker build -t "${IMAGE_NAME}:latest" .
+docker build -t "${IMAGE_NAME}:${IMAGE_VERSION}" .
+
+# push harness images
+docker push "${IMAGE_NAME}:latest"
+docker push "${IMAGE_NAME}:${IMAGE_VERSION}"
 
 if [[ $DOCKER_RUN -eq 'yes' ]]
 then

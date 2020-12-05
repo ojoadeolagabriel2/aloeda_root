@@ -1,6 +1,5 @@
 ---
 - name: "Check that the file_path: {{harness_file_path}} exists"
-
   vars:
     harness_file_path: "{{ PROJECT_DIR }}/deployment/api/collection"
     harness_mappings_path: "{{ PROJECT_DIR }}/deployment/api/collection/mappings"
@@ -19,5 +18,5 @@
 - debug: msg="harness_file_path~{{harness_file_path}} with harness_mappings_path~{{harness_mappings_path}} and harness_port~{{harness_port}} exists~{{harness_file_path_result.stat.exists}}"
 
 - name: build and deploy harness docker image
-  shell: "(cd {{role_path}}/files/api-harness-v1 && pwd && ./start.sh {{harness_file_path}} {{harness_mappings_path}} {{harness_port}} {{harness_container_name}} {{harness_image_name}} no)"
+  shell: "(cd {{role_path}}/files/api-harness-v1 && pwd && ./start.sh {{harness_file_path}} {{harness_mappings_path}} {{harness_port}} {{harness_container_name}} {{harness_image_name}} no {{bv}})"
   when: "harness_file_path_result is defined and harness_file_path_result.stat.exists == True and harness_file_path_result.stat.isdir"
