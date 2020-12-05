@@ -1,14 +1,14 @@
 ---
-- name: entrypoint play to aws
+- name: "verifying and building api harness and springboot java 11 app"
   hosts: localhost
   gather_facts: false
 
   roles:
     - { role: roles/build-api-harness,
         project_dir: "{{ PROJECT_DIR }}",
-        harness_port: "{{ HARNESS_PORT }}",
+        harness_port: "{{ HARNESS_PORT | default('8081:8081') }}",
         bv: "{{ PROJECT_IMAGE_VERSION }}"
-      }
+    }
     - { role: roles/build-promote-java-app,
         project_dir: "{{ PROJECT_DIR }}",
         project_artifact_name: "{{ PROJECT_DIR | basename }}",
@@ -16,11 +16,13 @@
         project_image_version: "{{ PROJECT_IMAGE_VERSION }}",
         ignore_docker_promotion: false,
         bv: "{{ PROJECT_IMAGE_VERSION }}"
-      }
+    }
 
 - name: deploy image to app instance
   hosts: app-instance
-
   roles:
-    - { role: roles/deploy-jar,
-        project_dir: "{{ PROJECT_DIR }}" }
+    - { role: roles/deploy-docker-image,
+        image_host_port: "{{ IMAGE_HOST_PORT | default(8080) }}",
+        project_artifact_name: "{{ PROJECT_DIR | basename }}",
+        project_dir: "{{ PROJECT_DIR }}",
+        bv: "{{ PROJECT_IMAGE_VERSION }}" }

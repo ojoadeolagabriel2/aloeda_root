@@ -2,7 +2,7 @@
 - set_fact:
     current_role_path: "{{role_path}}"
 
-- name: localhost
+- name: process request
   vars:
     manifest_files:
       - app-mysql.yaml.j2

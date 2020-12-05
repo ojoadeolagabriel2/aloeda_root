@@ -1,6 +1,6 @@
 ---
-- name: entrypoint play
-  hosts: localhost
+- name: provision mysql database
+  hosts: app-instance
   vars:
     recreate_db: "{{ PROVISION_DB }}"
 

@@ -1,0 +1,1 @@
+- script: "../scripts/run.sh {{image_host_port}} {{project_artifact_name}} {{ bv }}"
