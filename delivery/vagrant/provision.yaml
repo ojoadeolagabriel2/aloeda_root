@@ -3,7 +3,11 @@
   become: yes
 
   tasks:
+    - shell: "cat /etc/os-release"
+      become: yes
+
+    - script: "./scripts/install.sh"
+
     - name: Install Basic packages
       package:
         name: [ 'vim', 'zip', 'bash-completion', 'wget', 'tmux' ]
-    - command: "sudo apt-get install openjdk-11-jre openjdk-11-jdk"

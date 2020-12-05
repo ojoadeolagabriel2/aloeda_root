@@ -16,4 +16,3 @@
 
 - name: build if project dir is available
   shell: "(cd {{project_dir}} && {{ role_path }}/scripts/build.sh)"
-  delegate_to: 127.0.0.1

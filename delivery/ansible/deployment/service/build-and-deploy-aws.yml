@@ -16,7 +16,7 @@
         ignore_docker_promotion: True
       }
 
-- name: entrypoint play to aws II
+- name: deploy to app instances
   hosts: app-instance
 
   roles:
