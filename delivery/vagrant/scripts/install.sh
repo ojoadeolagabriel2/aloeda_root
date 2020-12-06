@@ -25,6 +25,18 @@ if ! docker ps --format '{{.Names}}' | grep -w some-redis &> /dev/null; then
     docker network connect local-network redis
 fi
 
+# install elk
+if ! docker ps --format '{{.Names}}' | grep -w elk &> /dev/null; then
+    docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk sebp/elk
+    docker network connect local-network elk
+fi
+
+# install artifactory
+if ! docker ps --format '{{.Names}}' | grep -w artifactory &> /dev/null; then
+    docker run --name artifactory -d -p 8081:8081 -p 8082:8082 docker.bintray.io/jfrog/artifactory-oss:latest
+    docker network connect local-network artifactory
+fi
+
 # install k8s
 sudo snap install microk8s --classic
 alias mk="microk8s.kubectl"
