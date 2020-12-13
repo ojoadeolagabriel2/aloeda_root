@@ -1,13 +1,55 @@
 ---
 - hosts: all
   become: yes
+  vars:
+    default_password: "Saturn432$"
+    users:
+      - username: adeolaojo
+        password: "{{ default_password }} | password_hash('sha512')"
+      - username: funmi
+        password: "{{ default_password}} | password_hash('sha512')"
 
   tasks:
-    - shell: "cat /etc/os-release"
-      become: yes
+    - name: create and/or change username password
+      user:
+        name: "{{ item.username }}"
+        password: "{{ item.password }}"
+      loop: "{{ users }}"
 
-    - script: "./scripts/install.sh"
+    - name: copy ssh keys
+      authorized_key:
+        key: "{{ lookup('file', '/Users/adeolaojo/.ssh/id_rsa.pub') }}"
+        user: "{{ item.username }}"
+        state: present
+        exclusive: False
+      loop: "{{ users }}"
 
-    - name: Install Basic packages
+    - name: "print ubuntu os information"
+      shell: "cat /etc/os-release"
+
+    - name: "install basic os packages"
       package:
         name: [ 'vim', 'zip', 'bash-completion', 'wget', 'tmux' ]
+
+    - name: "provision openjdk 11"
+      script: "./scripts/install_java.sh"
+
+    - name: "provision docker"
+      script: "./scripts/install_docker.sh"
+      tags: [ 'docker' ]
+
+    - name: "provision postgres"
+      script: "./scripts/install_postgres.sh"
+      tags: [ 'db' ]
+
+    - name: "provision grafana"
+      script: "./scripts/install_grafana.sh"
+
+    - name: "provision docker prometheus"
+      script: "./scripts/install_prometheus.sh"
+
+    - name: "provision docker elk"
+      script: "./scripts/install_elk.sh"
+
+    - name: "provision docker redis"
+      script: "./scripts/install_redis.sh"
