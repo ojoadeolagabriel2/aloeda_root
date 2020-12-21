@@ -1,6 +1,8 @@
 ---
-- hosts: all
+- name: Provisioning a new Ubuntu 20+ Host
+  hosts: all
   become: yes
+
   vars:
     default_password: "Saturn432$"
     users:
