@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/ab/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/ab/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/ansible/deployment/service/roles/mysql/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/ansible/deployment/service/roles/mysql/defaults/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/ansible/deployment/service/roles/mysql/vars/main.yml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +63,7 @@
       <updated>1608591486610</updated>
       <workItem from="1608591489606" duration="90000" />
       <workItem from="1608591643298" duration="1417000" />
-      <workItem from="1608666190854" duration="4089000" />
+      <workItem from="1608666190854" duration="4270000" />
     </task>
     <servers />
   </component>
