@@ -14,6 +14,8 @@
 
 - debug: msg="project_dir~{{project_dir}} with project_artifact_name~{{project_artifact_name}} exists~{{stat_result.stat.exists}}"
 
+- debug: msg="docker_access_token -> {{ docker_access_token }} artifactory_username -> {{ artifactory_username  }} artifactory_secret -> {{ artifactory_secret }}"
+
 - name: build and promote app to docker
-  shell: "{{ project_dir }}/deployment/{{ build_promotion_script }} {{ project_artifact_name }} {{ bv }}"
+  shell: "{{ project_dir }}/deployment/{{ build_promotion_script }} {{ project_artifact_name }} {{ bv }} {{ docker_access_token }} {{ artifactory_username  }} {{ artifactory_secret }}"
   when: ignore_docker_promotion|bool == false
