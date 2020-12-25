@@ -1,4 +1,7 @@
 #!/bin/sh -xe
 
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "app:/app" ab \
-    /usr/bin/ab -n 100 -c 5 "http://host.docker.internal:8094/api/v1/merchant" >./app/result.txt 2>&1
+TEST_URL="${1:-http://host.docker.internal:8094/api/v1/merchant}"
+ITERATIONS="${2:-1000}"
+CONCURRENT_REQUESTS="${3:-10}"
+
+ab -v 3 -n "$ITERATIONS" -c "$CONCURRENT_REQUESTS" "$TEST_URL" >/app/result.txt
