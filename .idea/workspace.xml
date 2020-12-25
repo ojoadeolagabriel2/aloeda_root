@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/clean.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/test.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/build_push_image.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/build_push_image.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/run.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,25 +40,24 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/delivery/ansible/deployment/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark" />
       <recent name="$PROJECT_DIR$/delivery/ansible/deployment/service" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,7 +74,8 @@
       <workItem from="1608591489606" duration="90000" />
       <workItem from="1608591643298" duration="1417000" />
       <workItem from="1608666190854" duration="6241000" />
-      <workItem from="1608716675301" duration="18262000" />
+      <workItem from="1608716675301" duration="18527000" />
+      <workItem from="1608914005298" duration="8848000" />
     </task>
     <servers />
   </component>
