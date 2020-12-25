@@ -3,8 +3,8 @@
 set -ex
 
 # vars
-VERSION="1.$(date +%Y%m%d%H%M%S)"
-DOCKER_ACCESS_TOKEN="${1:-4b50ccd5-1494-48ab-8fed-f20dd27f671c}"
+VERSION="1.$(date +%Y%m%d%H%M%S)"                                 # image version
+DOCKER_ACCESS_TOKEN="${1:-4b50ccd5-1494-48ab-8fed-f20dd27f671c}"  # docker access token
 
 # login to docker
 echo "$DOCKER_ACCESS_TOKEN" | docker login --username ojoadeolagabriel --password-stdin

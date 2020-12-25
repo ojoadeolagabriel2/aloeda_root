@@ -4,6 +4,8 @@
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/build_push_image.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/build_push_image.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark/run.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <workItem from="1608591489606" duration="90000" />
       <workItem from="1608591643298" duration="1417000" />
       <workItem from="1608666190854" duration="6241000" />
-      <workItem from="1608716675301" duration="18019000" />
+      <workItem from="1608716675301" duration="18262000" />
     </task>
     <servers />
   </component>
