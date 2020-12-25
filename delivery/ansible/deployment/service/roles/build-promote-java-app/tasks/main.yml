@@ -16,6 +16,6 @@
 
 - debug: msg="docker_access_token -> {{ docker_access_token }} artifactory_username -> {{ artifactory_username  }} artifactory_secret -> {{ artifactory_secret }}"
 
-- name: build and promote app to docker
+- name: build java 11 springboot app
   shell: "{{ project_dir }}/deployment/{{ build_promotion_script }} {{ project_artifact_name }} {{ bv }} {{ docker_access_token }} {{ artifactory_username  }} {{ artifactory_secret }}"
   when: ignore_docker_promotion|bool == false

@@ -18,11 +18,5 @@
         bv: "{{ PROJECT_IMAGE_VERSION }}"
     }
 
-- name: deploy image to app instance
-  hosts: app-instance
-  roles:
-    - { role: roles/deploy-docker-image,
-        image_host_port: "{{ IMAGE_HOST_PORT | default(8080) }}",
-        project_artifact_name: "{{ PROJECT_DIR | basename }}",
-        project_dir: "{{ PROJECT_DIR }}",
-        bv: "{{ PROJECT_IMAGE_VERSION }}" }
+- name: include deploy to docker play
+  include: promote-docker-image-to-env.yml
