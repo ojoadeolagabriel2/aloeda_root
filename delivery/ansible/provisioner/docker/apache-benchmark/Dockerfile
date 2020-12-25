@@ -10,4 +10,4 @@ RUN ["chmod", "+x", "run.sh"]
 
 ENTRYPOINT ["/app/run.sh"]
 
-CMD ["http://nowhere:9999:/replace", "1000", "10"]
+CMD ["http://host.docker.internal:8094/api/v1/merchant", "1000", "10"]
