@@ -1,7 +1,9 @@
 #!/bin/bash
 
-SCRIPT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+set -ex
+
+SHARED_NETWORK="${1:-local-network}"
 IMAGE=${1:-redis}
 
-docker rm -f $IMAGE &> /dev/null;
-docker run --name $IMAGE --net local-network -e ALLOW_EMPTY_PASSWORD=yes -d bitnami/redis:latest
+docker rm -f "$IMAGE" &> /dev/null;
+docker run --name "$IMAGE" --net "$SHARED_NETWORK" -e ALLOW_EMPTY_PASSWORD=yes -d bitnami/redis:latest
