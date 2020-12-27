@@ -1,7 +1,6 @@
 #!/bin/bash
 
 SHARED_NETWORK="${1:-local-network}"
-SCRIPT_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # install artifactory
 docker rm -f artifactory &> /dev/null;
