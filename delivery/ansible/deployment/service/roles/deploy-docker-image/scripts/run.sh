@@ -15,4 +15,4 @@ sudo docker rm -f "${PROJECT_ARTIFACT_NAME}" 2> /dev/null && echo "removed conta
 docker system prune -af && echo "removed image"
 
 # run new container
-sudo docker run -d -p "${IMAGE_HOST_PORT}:${IMAGE_HOST_PORT}" --env-file /etc/"$PROJECT_ARTIFACT_NAME".conf --name "${PROJECT_ARTIFACT_NAME}" "${IMAGE_NAME_WITH_VERSION}"
+sudo docker run --net local-network -d -p "${IMAGE_HOST_PORT}:${IMAGE_HOST_PORT}" --env-file /etc/"$PROJECT_ARTIFACT_NAME".conf --name "${PROJECT_ARTIFACT_NAME}" "${IMAGE_NAME_WITH_VERSION}"

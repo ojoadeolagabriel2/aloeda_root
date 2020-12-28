@@ -7,5 +7,5 @@
         image_host_port: "{{ IMAGE_HOST_PORT | default(8080) }}",
         project_artifact_name: "{{ PROJECT_DIR | basename }}",
         project_dir: "{{ PROJECT_DIR }}",
-        deploy_env: "local",
+        deploy_env: "{{ DEPLOYMENT_ENV | default('local') }}",
         bv: "{{ PROJECT_IMAGE_VERSION }}" }

@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/delivery/vagrant/scripts/install_ansible.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/ansible/deployment/service/group_vars/app-instance" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/deployment/service/group_vars/app-instance" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/vagrant/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/vagrant/scripts/install_artifactory.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/vagrant/scripts/install_artifactory.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/vagrant/scripts/install_elk.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/vagrant/scripts/install_elk.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery/vagrant/scripts/install_redis.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/vagrant/scripts/install_redis.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/ansible/deployment/service/promote-docker-image-to-env.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/deployment/service/promote-docker-image-to-env.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/ansible/deployment/service/roles/deploy-docker-image/scripts/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/ansible/deployment/service/roles/deploy-docker-image/scripts/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/bundler/global.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/box_meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/creator_uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/private_key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/synced_folders" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/.vagrant/rgloader/loader.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/vagrant/provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery/vagrant/scripts/install_docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery/vagrant/scripts/install_docker.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,30 +53,32 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/delivery_v2/orchestration/applications" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/delivery/vagrant/scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/delivery/vagrant/scripts" />
       <recent name="$PROJECT_DIR$/delivery_v2/orchestration/applications" />
       <recent name="$PROJECT_DIR$/delivery_v2/provision" />
       <recent name="$PROJECT_DIR$/delivery_v2/provision/virtualbox" />
       <recent name="$PROJECT_DIR$/delivery/ansible/provisioner/docker/apache-benchmark" />
-      <recent name="$PROJECT_DIR$/delivery/ansible/deployment/service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/delivery_v2/orchestration/applications" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,7 +99,8 @@
       <workItem from="1608914005298" duration="13621000" />
       <workItem from="1608978855694" duration="1986000" />
       <workItem from="1609009166224" duration="38000" />
-      <workItem from="1609009225326" duration="6501000" />
+      <workItem from="1609009225326" duration="22216000" />
+      <workItem from="1609161175194" duration="3861000" />
     </task>
     <servers />
   </component>
@@ -94,6 +109,7 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.j2" />
   </component>
 </project>

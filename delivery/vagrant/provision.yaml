@@ -55,3 +55,6 @@
 
     - name: "provision docker redis"
       script: "./scripts/install_redis.sh"
+
+    - name: "provision ansible"
+      script: "./scripts/install_ansible.sh"
