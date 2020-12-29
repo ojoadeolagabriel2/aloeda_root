@@ -10,6 +10,7 @@
         password: "{{ default_password }} | password_hash('sha512')"
       - username: funmi
         password: "{{ default_password}} | password_hash('sha512')"
+    pubkey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4DgFZHKPIomcPfq2eX06Jvu8divVSJ5OXuIZ1G1OnjZAc9vc2Od5a2/BNM7Z2MH14qfiT3KMrfwwv+h+93w8cm8prjJIdI/W5UU49xnpDn4EO9gp087+uMITJ/rW7heZvJsp39bcaL+YBv3s9Fy1DZ2Pccmg7kcWdmFqvJFS8AzRGjfYLb0/OcfJgeENG22HAVlmlOGBZnG9GP8CR2Kgis2HOZBbYW/dc7clHAHg+uurHK5pfb4OAebBU/yIvs3H1oVn0EqZsBEK/IAawm7yWpIfkEqekFXE/II3akeiX8PJ86CMPW0Ql5ra7hzWau9qe2q30EzVHUDChP/36d2lWq/CpZwrWax/KX9KNWQyhBpv4gNXkVljaNOs2q5p0JK5Or8udGYUg1B8Qx2JWIqVZt1kNuo2+zmEDQF0y+SrGQLnZ99SlYbt0tmN2bRI44RXomD3ZHKLvKctxsPtdmwHap80VrbWlM92a2bhCR3bw8HWUGAVIcskwOBOLuOVQDgc= adeolaojo@adeolas-MacBook-Pro.local"
 
   tasks:
     - name: create and/or change username password
@@ -58,3 +59,21 @@
 
     - name: "provision ansible"
       script: "./scripts/install_ansible.sh"
+
+    - name: "make .ssh dir"
+      file:
+        path: "/home/{{item.username}}/.ssh"
+        state: directory
+      loop: "{{ users }}"
+
+    - name: "create empty authorized_keys file"
+      file:
+        path: "/home/{{item.username}}/.ssh/authorized_keys"
+        state: touch
+      loop: "{{ users }}"
+
+    - name: "copy public key"
+      lineinfile:
+        path: "/home/{{item.username}}/.ssh/authorized_keys"
+        line: "{{ pubkey }}"
+      loop: "{{ users }}"
