@@ -1,5 +1,0 @@
-[localhost]
-localhost   ansible_connection=local
-
-[ec2-java-instances]
-ec2-instance-1    ansible_host="{{ AWS_DOMAIN_PATH }}" ansible_python_interpreter=/usr/bin/python3

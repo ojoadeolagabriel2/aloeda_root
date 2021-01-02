@@ -1,4 +1,0 @@
----
-ansible_user: vagrant
-ansible_host: localhost
-ansible_ssh_private_key_file: "/Users/adeolaojo/Code/aloeda_root/delivery/vagrant/.vagrant/machines/default/virtualbox/private_key"

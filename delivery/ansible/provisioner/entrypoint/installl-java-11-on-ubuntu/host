@@ -1,7 +1,0 @@
-[deployer]
-127.0.0.1:2200
-
-[all:vars]
-ansible_ssh_private_key_file=/Users/adeolaojo/Code/aloeda_root/delivery/vagrant/.vagrant/machines/default/virtualbox/private_key
-ansible_user=vagrant
-ansible_python_interpreter=/usr/bin/python3

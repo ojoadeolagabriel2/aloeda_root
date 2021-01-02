@@ -1,0 +1,12 @@
+---
+- name: "build and promote react app"
+  hosts: all
+  become: yes
+
+  roles:
+    - {
+        role: roles/build-react-app-docker-image
+    }
+    - {
+      role: roles/push-docker-image
+    }

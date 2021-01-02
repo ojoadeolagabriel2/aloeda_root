@@ -1,0 +1,24 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+  external_labels:
+    monitor: 'codelab-monitor'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['172.17.0.1:8092']
+
+  - job_name: 'autogate-request-service'
+    metrics_path: '/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: [ 'autogate-request-service.local-network:8095' ]
+
+  - job_name: 'autogate-request-consumer'
+      metrics_path: '/prometheus'
+      scrape_interval: 5s
+      static_configs:
+        - targets: [ 'autogate-request-consumer.local-network:8085' ]
