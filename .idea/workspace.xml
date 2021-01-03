@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/bundler/global.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/box_meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/creator_uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/synced_folders" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/rgloader/loader.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +84,7 @@
       <workItem from="1609009166224" duration="38000" />
       <workItem from="1609009225326" duration="22216000" />
       <workItem from="1609161175194" duration="7222000" />
-      <workItem from="1609627070545" duration="1930000" />
+      <workItem from="1609627070545" duration="2370000" />
     </task>
     <servers />
   </component>

@@ -22,5 +22,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provision.yaml"
     ansible.verbose = true
+    ansible.tags = "prometheus"
   end
 end

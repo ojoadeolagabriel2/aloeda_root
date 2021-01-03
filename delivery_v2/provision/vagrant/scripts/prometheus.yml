@@ -18,7 +18,7 @@ scrape_configs:
       - targets: [ 'autogate-request-service.local-network:8095' ]
 
   - job_name: 'autogate-request-consumer'
-      metrics_path: '/prometheus'
-      scrape_interval: 5s
-      static_configs:
-        - targets: [ 'autogate-request-consumer.local-network:8085' ]
+    metrics_path: '/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: [ 'autogate-request-consumer.local-network:8085' ]
