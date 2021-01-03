@@ -1,5 +1,5 @@
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
-Vagrant.configure("2") do ||
+Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "./", "/x"
   config.vm.box = "bento/ubuntu-20.04"
@@ -22,6 +22,5 @@ Vagrant.configure("2") do ||
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provision.yaml"
     ansible.verbose = true
-    ansible.tags = "grafana"
   end
 end
