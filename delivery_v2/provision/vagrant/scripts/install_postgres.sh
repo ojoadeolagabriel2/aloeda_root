@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt install postgresql postgresql-contrib -y
+
 docker rm -f pg-docker &> /dev/null;
 
 docker run -d --rm --net local-network \

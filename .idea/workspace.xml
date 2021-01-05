@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/prometheus.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1609009166224" duration="38000" />
       <workItem from="1609009225326" duration="22216000" />
       <workItem from="1609161175194" duration="7222000" />
-      <workItem from="1609627070545" duration="2370000" />
+      <workItem from="1609627070545" duration="3745000" />
     </task>
     <servers />
   </component>
