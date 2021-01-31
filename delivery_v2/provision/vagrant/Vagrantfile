@@ -1,19 +1,18 @@
+require 'json'
+
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
+
 Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "./", "/x"
   config.vm.box = "bento/ubuntu-20.04"
-  config.vm.network "forwarded_port", guest: 5432, host: 5433
-  config.vm.network "forwarded_port", guest: 6379, host: 6380
-  config.vm.network "forwarded_port", guest: 9090, host: 9091
-  config.vm.network "forwarded_port", guest: 7080, host: 7080
-  config.vm.network "forwarded_port", guest: 9200, host: 9201
-  config.vm.network "forwarded_port", guest: 9300, host: 9301
-  config.vm.network "forwarded_port", guest: 8092, host: 8094
-  config.vm.network "forwarded_port", guest: 8500, host: 8500
-  config.vm.network "forwarded_port", guest: 8300, host: 8300
-  config.vm.network "forwarded_port", guest: 8095, host: 8095
-  config.vm.network "forwarded_port", guest: 3000, host: 3001
+
+  # parse port configurations
+  file = File.read('ports.json')
+  vagrant_config = JSON.parse(file)
+  vagrant_config.each do |item|
+    config.vm.network "forwarded_port", guest: item["guest"], host: item["host"]
+  end
 
   config.vm.provision "shell", inline: <<-SHELL
       echo "sudo su -" >> .bashrc
@@ -22,6 +21,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provision.yaml"
     ansible.verbose = true
-    ansible.tags = "prometheus"
+    ansible.tags = ENV['VAGRANT_TAG'] || nil
   end
 end

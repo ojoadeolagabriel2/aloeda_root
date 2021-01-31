@@ -1,2 +1,6 @@
 ---
 - name: "build react app"
+  hosts: local
+
+  tasks:
+    - name: "build"

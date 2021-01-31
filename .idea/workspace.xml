@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/ports.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/webapp/build-deploy-react-app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/webapp/build-deploy-react-app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/webapp/roles/build-react-app/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/webapp/roles/build-react-app/tasks/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,14 @@
       <workItem from="1609009166224" duration="38000" />
       <workItem from="1609009225326" duration="22216000" />
       <workItem from="1609161175194" duration="7222000" />
-      <workItem from="1609627070545" duration="3745000" />
+      <workItem from="1609627070545" duration="4254000" />
+      <workItem from="1610037396443" duration="253000" />
+      <workItem from="1610048681826" duration="293000" />
+      <workItem from="1610311511346" duration="1677000" />
+      <workItem from="1610806667652" duration="472000" />
+      <workItem from="1610913675442" duration="991000" />
+      <workItem from="1611523018161" duration="261000" />
+      <workItem from="1612119215655" duration="3314000" />
     </task>
     <servers />
   </component>

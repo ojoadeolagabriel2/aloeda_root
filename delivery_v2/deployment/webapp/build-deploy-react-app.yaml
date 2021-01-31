@@ -8,5 +8,5 @@
         role: roles/build-react-app-docker-image
     }
     - {
-      role: roles/push-docker-image
+        role: roles/push-docker-image
     }

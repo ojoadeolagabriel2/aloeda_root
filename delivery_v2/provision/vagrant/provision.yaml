@@ -74,7 +74,7 @@
 
     - name: "provision splunk"
       script: "./scripts/install_splunk.sh"
-      tags: ["prometheus", "instrumentation"]
+      tags: ["splunk", "instrumentation"]
 
     - name: "provision consul"
       script: "./scripts/install_consul.sh"
