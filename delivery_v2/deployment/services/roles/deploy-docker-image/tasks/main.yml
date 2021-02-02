@@ -3,5 +3,5 @@
     src: "{{ project_dir }}/deployment/inventories/{{ deploy_env }}/env"
     dest: "/etc/{{ project_artifact_name }}.conf"
 
-- name: start docker container for {{project_artifact_name}} on {{ ansible_ssh_host }}:{{hostvars[inventory_hostname].ansible_port}}
+- name: "start docker container"
   script: "../scripts/run.sh {{image_host_port}} {{project_artifact_name}} {{ bv }}"

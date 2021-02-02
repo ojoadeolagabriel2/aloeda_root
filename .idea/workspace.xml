@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/ports.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/webapp/build-deploy-react-app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/webapp/build-deploy-react-app.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/webapp/roles/build-react-app/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/webapp/roles/build-react-app/tasks/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/tasks/main.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,19 +53,6 @@
       <recent name="$PROJECT_DIR$/delivery_v2/orchestration/applications" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +77,8 @@
       <workItem from="1610806667652" duration="472000" />
       <workItem from="1610913675442" duration="991000" />
       <workItem from="1611523018161" duration="261000" />
-      <workItem from="1612119215655" duration="3314000" />
+      <workItem from="1612119215655" duration="9017000" />
+      <workItem from="1612206185422" duration="596000" />
     </task>
     <servers />
   </component>
