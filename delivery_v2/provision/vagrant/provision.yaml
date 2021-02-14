@@ -79,3 +79,7 @@
     - name: "provision consul"
       script: "./scripts/install_consul.sh"
       tags: ["consul"]
+
+    - name: "provision kafka + zookeeper"
+      script: "./scripts/install_kafka.sh"
+      tags: [ "kafka_zookeeper" ]
