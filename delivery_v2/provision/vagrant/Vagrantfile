@@ -8,9 +8,10 @@ Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-20.04"
 
   # parse port configurations
-  file = File.read('ports.json')
+  file = File.read('vagrant_config.json')
   vagrant_config = JSON.parse(file)
-  vagrant_config.each do |item|
+
+  vagrant_config["hosts"].each do |item|
     config.vm.network "forwarded_port", guest: item["guest"], host: item["host"]
   end
 
@@ -19,7 +20,7 @@ Vagrant.configure("2") do |config|
   SHELL
 
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "provision.yaml"
+    ansible.playbook = vagrant_config["provision_script"]
     ansible.verbose = true
     ansible.tags = ENV['VAGRANT_TAG'] || nil
   end

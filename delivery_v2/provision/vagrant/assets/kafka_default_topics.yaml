@@ -1,0 +1,4 @@
+general:
+  eu:
+    - emails.autogate
+    - transfers.bulkpayments.receive

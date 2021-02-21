@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/assets/install_kafka.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/assets/kafka_dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_kafka.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/assets/kafka_default_topics.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/ports.json" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/ports.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/scripts/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/scripts/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/ports.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +103,9 @@
       <workItem from="1612206185422" duration="596000" />
       <workItem from="1612292850669" duration="3306000" />
       <workItem from="1612377451755" duration="962000" />
-      <workItem from="1613327929449" duration="3815000" />
+      <workItem from="1613327929449" duration="4197000" />
+      <workItem from="1613334084511" duration="760000" />
+      <workItem from="1613825963690" duration="4662000" />
     </task>
     <servers />
   </component>

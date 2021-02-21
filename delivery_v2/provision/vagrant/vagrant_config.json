@@ -1,0 +1,58 @@
+{
+  "provision_script": "provision.yaml",
+  "hosts": [
+    {
+      "guest": 5432,
+      "host": 5433
+    },
+    {
+      "guest": 6379,
+      "host": 6380
+    },
+    {
+      "guest": 9090,
+      "host": 9091
+    },
+    {
+      "guest": 9092,
+      "host": 9082
+    },
+    {
+      "guest": 2181,
+      "host": 2171
+    },
+    {
+      "guest": 7080,
+      "host": 7080
+    },
+    {
+      "guest": 9200,
+      "host": 9201
+    },
+    {
+      "guest": 9300,
+      "host": 9301
+    },
+    {
+      "name": "autogate-request-service",
+      "guest": 8092,
+      "host": 8094
+    },
+    {
+      "guest": 8500,
+      "host": 8500
+    },
+    {
+      "guest": 8300,
+      "host": 8300
+    },
+    {
+      "guest": 8095,
+      "host": 8095
+    },
+    {
+      "guest": 3000,
+      "host": 3001
+    }
+  ]
+}
