@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_ansible_tower.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/bundler/global.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/box_meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/creator_uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/synced_folders" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/rgloader/loader.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_redis.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_redis.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +104,7 @@
       <workItem from="1615647776482" duration="5085000" />
       <workItem from="1616926064531" duration="1880000" />
       <workItem from="1616939989104" duration="677000" />
-      <workItem from="1617547546735" duration="312000" />
+      <workItem from="1617547546735" duration="2260000" />
     </task>
     <servers />
   </component>
