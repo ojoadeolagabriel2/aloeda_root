@@ -1,9 +1,16 @@
 {
+  "vm_box": "bento/ubuntu-20.04",
   "provision_script": "provision.yaml",
   "hosts": [
     {
+      "name": "postgres",
       "guest": 5432,
       "host": 5433
+    },
+    {
+      "name": "ansible_tower",
+      "guest": 443,
+      "host": 443
     },
     {
       "guest": 6379,

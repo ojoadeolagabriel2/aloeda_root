@@ -5,11 +5,13 @@ ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 Vagrant.configure("2") do |config|
 
   config.vm.synced_folder "./", "/x"
-  config.vm.box = "bento/ubuntu-20.04"
 
   # parse port configurations
   file = File.read('vagrant_config.json')
   vagrant_config = JSON.parse(file)
+
+  # set box type
+  config.vm.box = vagrant_config["vm_box"]
 
   vagrant_config["hosts"].each do |item|
     config.vm.network "forwarded_port", guest: item["guest"], host: item["host"]

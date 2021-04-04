@@ -8,6 +8,8 @@
 *.iml
 *.iws
 
+.vagrant
+
 # Mac
 .DS_Store
 

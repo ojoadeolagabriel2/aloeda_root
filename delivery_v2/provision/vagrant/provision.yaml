@@ -1,7 +1,8 @@
 ---
-- name: Provisioning a new Ubuntu 20+ Host
+- name: Provisioning Host
   hosts: all
   become: yes
+  gather_facts: no
 
   vars:
     default_password: "Saturn432$"
@@ -36,7 +37,7 @@
         exclusive: False
       loop: "{{ users }}"
 
-    - name: "print ubuntu os information"
+    - name: "print os information"
       shell: "cat /etc/os-release"
 
     - name: "install basic os packages"
@@ -50,9 +51,9 @@
       script: "./scripts/install_docker.sh"
       tags: [ 'docker' ]
 
-    - name: "provision postgres"
-      script: "./scripts/install_postgres.sh"
-      tags: [ 'postgres' ]
+#    - name: "provision postgres"
+#      script: "./scripts/install_postgres.sh"
+#      tags: [ 'postgres' ]
 
     - name: "provision grafana"
       script: "./scripts/install_grafana.sh"
@@ -71,6 +72,10 @@
     - name: "provision ansible"
       script: "./scripts/install_ansible.sh"
       tags: ["ansible"]
+
+    - name: "provision ansible tower"
+      script: "./scripts/install_ansible_tower.sh"
+      tags: ["ansible", "ansible_tower"]
 
     - name: "provision splunk"
       script: "./scripts/install_splunk.sh"

@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/assets/kafka_default_topics.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_ansible_tower.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/scripts/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/scripts/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/bundler/global.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_provision" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/action_set_name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/box_meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/creator_uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/id" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/index_uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/private_key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/synced_folders" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/machines/default/virtualbox/vagrant_cwd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/.vagrant/rgloader/loader.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/ports.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +53,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/delivery/vagrant/scripts" />
       <recent name="$PROJECT_DIR$/delivery_v2/orchestration/applications" />
       <recent name="$PROJECT_DIR$/delivery_v2/provision" />
-      <recent name="$PROJECT_DIR$/delivery_v2/provision/virtualbox" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/delivery_v2" />
       <recent name="$PROJECT_DIR$/delivery_v2/orchestration/applications" />
     </key>
   </component>
@@ -105,7 +113,12 @@
       <workItem from="1612377451755" duration="962000" />
       <workItem from="1613327929449" duration="4197000" />
       <workItem from="1613334084511" duration="760000" />
-      <workItem from="1613825963690" duration="4662000" />
+      <workItem from="1613825963690" duration="5311000" />
+      <workItem from="1615041579934" duration="593000" />
+      <workItem from="1615647776482" duration="5085000" />
+      <workItem from="1616926064531" duration="1880000" />
+      <workItem from="1616939989104" duration="677000" />
+      <workItem from="1617547546735" duration="312000" />
     </task>
     <servers />
   </component>
