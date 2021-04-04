@@ -51,9 +51,9 @@
       script: "./scripts/install_docker.sh"
       tags: [ 'docker' ]
 
-#    - name: "provision postgres"
-#      script: "./scripts/install_postgres.sh"
-#      tags: [ 'postgres' ]
+    - name: "provision postgres"
+      script: "./scripts/install_postgres.sh"
+      tags: [ 'postgres' ]
 
     - name: "provision grafana"
       script: "./scripts/install_grafana.sh"

@@ -2,6 +2,7 @@
 - name: deploy image to app instance
   hosts: app-instance
   become: yes
+
   roles:
     - { role: roles/deploy-docker-image,
         image_host_port: "{{ IMAGE_HOST_PORT | default(8080) }}",
