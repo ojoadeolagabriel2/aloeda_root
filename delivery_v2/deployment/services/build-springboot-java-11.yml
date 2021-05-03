@@ -20,4 +20,3 @@
 
 - name: "include deploy to docker play"
   include: promote-docker-image-to-env.yml
-  envs: ["vagrant", "aws"]

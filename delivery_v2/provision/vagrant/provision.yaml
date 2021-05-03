@@ -46,10 +46,15 @@
 
     - name: "provision openjdk 11"
       script: "./scripts/install_java.sh"
+      tags: [ 'java' ]
 
     - name: "provision docker"
       script: "./scripts/install_docker.sh"
-      tags: [ 'docker' ]
+      tags: [ 'docker', 'virtualization' ]
+
+    - name: "provision kubernetes"
+      script: "./scripts/install_kubernetes.sh"
+      tags: [ 'kubernetes', 'virtualization' ]
 
     - name: "provision postgres"
       script: "./scripts/install_postgres.sh"

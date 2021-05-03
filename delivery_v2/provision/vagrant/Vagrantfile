@@ -24,6 +24,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = vagrant_config["provision_script"]
     ansible.verbose = true
-    ansible.tags = ENV['VAGRANT_TAG'] || nil
+    ansible.tags = vagrant_config["restricted_tags"] || nil
   end
 end
