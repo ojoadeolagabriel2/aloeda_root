@@ -2,7 +2,7 @@
   "vm_box": "bento/ubuntu-20.04",
   "provision_script": "provision.yaml",
   "restricted_tags": [
-    "java"
+    "kubernetes", "java"
   ],
   "hosts": [
     {

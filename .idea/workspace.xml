@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/delivery_v2/deployment/config/secret.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/stop.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/services/build-springboot-java-11.yml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/services/build-springboot-java-11.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/scripts/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/deployment/services/roles/deploy-docker-image/scripts/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/Vagrantfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/provision.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_kubernetes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_kubernetes.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,15 +56,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,7 +109,8 @@
       <workItem from="1619289583503" duration="39000" />
       <workItem from="1619289639662" duration="42000" />
       <workItem from="1619289702630" duration="1270000" />
-      <workItem from="1620072469569" duration="155000" />
+      <workItem from="1620072469569" duration="1830000" />
+      <workItem from="1620487291987" duration="483000" />
     </task>
     <servers />
   </component>
