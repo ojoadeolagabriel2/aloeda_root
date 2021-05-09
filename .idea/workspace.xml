@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_kubernetes.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_kubernetes.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/vagrant_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_artifactory.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_artifactory.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <workItem from="1619289639662" duration="42000" />
       <workItem from="1619289702630" duration="1270000" />
       <workItem from="1620072469569" duration="1830000" />
-      <workItem from="1620487291987" duration="483000" />
+      <workItem from="1620487291987" duration="1837000" />
     </task>
     <servers />
   </component>
