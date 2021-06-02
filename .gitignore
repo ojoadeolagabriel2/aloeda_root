@@ -3,6 +3,10 @@
 .project
 .settings/
 
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+
 # Intellij
 .idea/
 *.iml

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34ecf027-3eb6-47d3-9a3b-ac9b29f17612" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/delivery_v2/provision/terraform/init.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/delivery_v3/deployment/services/build-java-11.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/vagrant/scripts/install_postgres.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delivery_v2/provision/terraform/init.tf" beforeDir="false" afterPath="$PROJECT_DIR$/delivery_v2/provision/terraform/init.tf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +15,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,13 +61,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +117,12 @@
       <workItem from="1619289639662" duration="42000" />
       <workItem from="1619289702630" duration="1270000" />
       <workItem from="1620072469569" duration="1830000" />
-      <workItem from="1620487291987" duration="2167000" />
+      <workItem from="1620487291987" duration="3083000" />
+      <workItem from="1621169444172" duration="1568000" />
+      <workItem from="1621876463835" duration="858000" />
+      <workItem from="1621879518643" duration="137000" />
+      <workItem from="1622483242576" duration="824000" />
+      <workItem from="1622579778071" duration="2368000" />
     </task>
     <servers />
   </component>
